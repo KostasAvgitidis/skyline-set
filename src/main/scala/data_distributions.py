@@ -36,7 +36,7 @@ def distribute(args):
         else:
             correlated.append(base + random.uniform(0.5, 1) * i)
     for index, x in enumerate(correlated):
-        correlated[index] = (x - min(x)) / abs(max(x) - min(x))
+        correlated[index] = (x - min(x)) / max(x) - min(x)
     for index, x in enumerate(normal):
         normal[index] = (x - min(x)) / (max(x) - min(x))
     for index, x in enumerate(chisquare):
